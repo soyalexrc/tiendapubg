@@ -23,3 +23,7 @@ height: 100%;
 .view,body,
 html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,
 .top-nav-collapse{background-color:#F2A900}@media only screen and (max-width:768px){.navbar{background-color:#F2A900}}
+
+.btn-pubg{
+  background-color: #F2A900!important;
+}
