@@ -2540,7 +2540,27 @@
     $(document).ready(() => {
       new WOW().init();
 
-      var model = {}
+      var pages = [
+        {
+          name: 'Page 1',
+          rows: [
+            {
+              name: 'Row 1',
+              row: [
+                {
+                  name: 'Item 4',
+                  imageUrl: 'https://firebasestorage.googleapis.com/v0/b/tiendapubg-616ee.appspot.com/o/categorias%2Ffranelas-hombre%2Fcamiseta-pubg-1.jpg?alt=media&token=a5006d2d-67ec-4fdd-9085-bf1524c78355',
+                  title: 'T-Shirt',
+                  description: 'PUBG T-Shirt',
+                  price: '12.66$',
+                  heartActive: 'active',
+                  link: 'https://amzn.to/2Y6OWq4'
+                }
+              ]
+            }
+          ],
+        }
+      ];
 
       $("#row1Vista1").append("<div class=\"col-lg-3 col-md-6 mb-4\">\n" +
               "            <div class=\"card card-ecommerce\">\n" +
