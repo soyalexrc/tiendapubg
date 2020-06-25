@@ -17,81 +17,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../../css/style.css">
 
-  <style>
 
-    html,
-    body,
-    header,
-    .jarallax {
-      height: 700px;
-    }
-
-    @media (max-width: 740px) {
-      html,
-      body,
-      header,
-      .jarallax {
-        height: 100vh;
-      }
-    }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-      html,
-      body,
-      header,
-      .jarallax {
-        height: 100vh;
-      }
-    }
-
-    @media (min-width: 560px) and (max-width: 650px) {
-      header .jarallax h1 {
-        margin-bottom: .5rem !important;
-      }
-      header .jarallax h5 {
-        margin-bottom: .5rem !important;
-      }
-    }
-
-    @media (min-width: 660px) and (max-width: 700px) {
-      header .jarallax h1 {
-        margin-bottom: 1.5rem !important;
-      }
-      header .jarallax h5 {
-        margin-bottom: 1.5rem !important;
-      }
-    }
-
-    .top-nav-collapse {
-      background-color: #F2A900 !important;
-    }
-
-    .navbar:not(.top-nav-collapse) {
-      background: transparent !important;
-    }
-
-    @media (max-width: 768px) {
-      .navbar:not(.top-nav-collapse) {
-        background: #F2A900 !important;
-      }
-    }
-    @media (min-width: 800px) and (max-width: 850px) {
-        .navbar:not(.top-nav-collapse) {
-            background: #F2A900!important;
-        }
-    }
-
-    footer.page-footer {
-      background-color: #F2A900!important;
-    }
-
-    @media (max-width: 450px) {
-      .display-3 {
-        font-size: 3rem;
-      }
-    }
-
-  </style>
 
 </head>
 
@@ -887,7 +813,7 @@
         pages.forEach(page => {
             $("#catalog").append("<div class=\"container\" id=\"" + page.id + "\">");
 
-            var indexRow = 1;
+            let indexRow = 1;
             page.rows.forEach(row => {
                 $("#" + page.id).append("<div class=\"row\" id=\"" + page.id + "row"+indexRow+"\"></div>");
 
@@ -940,28 +866,19 @@
 
      $('#page1').click(() =>{
       $("#vista1").show();
-       $("#vista2").hide();
-       $("#vista3").hide();
-       $("#vista4").hide();
      });
 
      $('#page2').click(() =>{
       $("#vista1").hide();
        $("#vista2").show();
-       $("#vista3").hide();
-       $("#vista4").hide();
      });
 
      $('#page3').click(() =>{
-      $("#vista1").hide();
        $("#vista2").hide();
        $("#vista3").show();
-       $("#vista4").hide();
      });
 
      $('#page4').click(() =>{
-      $("#vista1").hide();
-       $("#vista2").hide();
        $("#vista3").hide();
        $("#vista4").show();
      });
