@@ -164,7 +164,7 @@
   <!-- Navbar -->
 
     <!-- Intro Section -->
-    <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://firebasestorage.googleapis.com/v0/b/tiendapubg-616ee.appspot.com/o/categorias%2Ffranelas-hombre%2FFondo-camisetas.jpg?alt=media&token=0c71580e-10ca-4c91-9625-106968d672e1); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div id="jarallax" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://firebasestorage.googleapis.com/v0/b/tiendapubg-616ee.appspot.com/o/categorias%2Ffranelas-hombre%2FFondo-camisetas.jpg?alt=media&token=0c71580e-10ca-4c91-9625-106968d672e1); background-repeat: no-repeat; background-size: cover; background-position: center center;">
       <div class="mask rgba-white-light">
         <div class="container h-100 d-flex justify-content-center align-items-center">
           <div class="row pt-5 mt-3">
@@ -209,10 +209,10 @@
           <li class="page-item " >
             <a class="page-link" tabindex="-1">Previous</a>
           </li>
-          <li class="page-item active"><a class="page-link " id="page1">1</a></li>
-          <li class="page-item " id="page2"> <a class="page-link">2 </a></li>
-          <li class="page-item " id="page3"><a class="page-link">3</a></li>
-          <li class="page-item " id="page4"><a class="page-link">4</a></li>
+          <li class="page-item active"><a href="#jarallax" class="page-link " id="page1">1</a></li>
+          <li class="page-item " id="page2"> <a href="#jarallax" class="page-link">2 </a></li>
+          <li class="page-item " id="page3"><a href="#jarallax" class="page-link">3</a></li>
+          <li class="page-item " id="page4"><a href="#jarallax" class="page-link">4</a></li>
 
           <li class="page-item "><a class="page-link">Next</a></li>
         </ul>
@@ -928,10 +928,7 @@
             })
         });
 
-        $("#vista1").show();
-        $("#vista2").hide();
-        $("#vista3").hide();
-        $("#vista4").hide();
+        showPage(1);
     });
 
     $('li').click(function() {
@@ -939,32 +936,29 @@
      });
 
      $('#page1').click(() =>{
-      $("#vista1").show();
-       $("#vista2").hide();
-       $("#vista3").hide();
-       $("#vista4").hide();
+      showPage(1);
      });
 
      $('#page2').click(() =>{
-      $("#vista1").hide();
-       $("#vista2").show();
-       $("#vista3").hide();
-       $("#vista4").hide();
+         showPage(2);
      });
 
      $('#page3').click(() =>{
-      $("#vista1").hide();
-       $("#vista2").hide();
-       $("#vista3").show();
-       $("#vista4").hide();
+         showPage(3);
      });
 
      $('#page4').click(() =>{
-      $("#vista1").hide();
-       $("#vista2").hide();
-       $("#vista3").hide();
-       $("#vista4").show();
+         showPage(4);
      });
+
+      function showPage(pageNumber) {
+          $("#vista1").hide();
+          $("#vista2").hide();
+          $("#vista3").hide();
+          $("#vista4").hide();
+
+          $("#vista" + pageNumber).show();
+      }
 
   </script>
 </body>
